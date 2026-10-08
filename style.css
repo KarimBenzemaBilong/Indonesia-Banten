@@ -83,7 +83,7 @@ header nav ul li a:hover::before {
 
 /*Beranda Section*/
 .hero {
-    background: url(Pemandangan-Banten-Biru.jpeg);
+    background: url(Pemandangan-Banten-Blue.jpeg);
     background-size: 100%, auto;
     min-height: 100dvh;
 }
