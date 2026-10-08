@@ -1,0 +1,595 @@
+/*Generic Section*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: Helvetica, sans-serif;
+}
+
+/*Header Section*/
+header {
+    background-color: #ffffff;
+    padding: 15px 10px 15px 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo-banten a {
+    color: #031849;
+    font-size: 18px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+header nav ul li {
+    float: left;
+    list-style-type: none;
+    margin: 0px 10px 0px 10px;
+}
+
+header nav ul li a {
+    color: #000; 
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+header nav ul li a:hover {
+    color: #031849;
+    font-weight: bold;
+    position: relative;
+}
+
+header nav ul li a:hover::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    background-color: #d2b40c;
+    font-weight: bold;
+    animation-name: hover-underline;
+    animation-duration: 1s;
+    animation-timing-function: easy-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hover-underline {
+    0% {
+        width: 0%;
+        background-color: #d2b40c;
+    }
+    100% {
+        width: 100%;
+        background-color: #d2b40c;
+    }
+}
+
+/*Beranda Section*/
+.hero {
+    background: url(images/Pemandangan-Banten-Blue.jpeg);
+    background-size: 100%, auto;
+    min-height: 100dvh;
+}
+
+.container-hero {
+    position: relative;
+    transform: translateY(50%);
+    margin-left: 50px;
+}
+
+.hero .home-label, .hero h1, .hero p, .hero a {
+    line-height: 1.5;
+    letter-spacing: 1px;
+    left: 0px;
+    position: relative;
+}
+
+.home-label {
+    color: gold;
+}
+
+.hero h1 {
+    color: #ffffff;
+    font-size: 50px;
+}
+
+.hero p {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.hero .btn, .btn {
+    font-weight:bold;
+    background-color: #d2b40c;
+    color: #031849;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.arrow-icon {
+    position: relative;
+    top: 8px;
+}
+
+.container {
+    margin: 50px 50px 0px 50px;
+    min-height: 100dvh;
+    position: relative;
+}
+
+.information p {
+    color: gray;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-flow: row wrap;
+    grid-gap: 20px;
+    justify-content: space-around;
+}
+
+.card-info {
+    width: 230px;
+    height: 200px;
+    background-color: #00c3ff0e;
+    border: 1px solid #00c3ff94;
+    border-radius: 10px;
+}
+
+.card-container p, .card-info h3, .card-info p {
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin: 10px 5px 0px 20px;
+}
+
+.card-container p {
+    color: gray;
+}
+
+.card-container h3, .container h2, .Banten-map-information h2, .title-budaya h2 {
+    color: #031849;
+    position: relative;
+}
+ 
+.information h2::before, .Banten-map-information h2::before, .title-budaya h2::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    bottom: 40px;
+    left: 0;
+    height: 3px;
+    background-color: #d2b40c;
+}
+
+.title-budaya h2::before {
+    content: "";
+    position: absolute;
+    left: 510px;
+}
+
+.card-icon {
+    background-color: #004cff;
+    padding: 10px;
+    border-radius: 100%;
+    margin: 10px 20px 0px 30px;
+}
+
+#green-map-icon {
+    background-color: #04763b;
+}
+
+#purple-map-icon {
+    background-color: purple;
+}
+
+#orange-map-icon {
+    background-color: orange;
+}
+
+.Banten-map-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #00c3ff0e;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#banten-map {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 20px 20px 20px 20px;
+}
+
+.Banten-map-information {
+    margin: 20px 20px 20px 20px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.Banten-map-information h2 {
+    color: #031849;
+    margin-bottom: 20px;
+}
+
+.Banten-map-information p {
+    margin-bottom: 20px;
+}
+
+.card-info-label {
+    font-weight: bold;
+}
+
+.link-btn {
+    color: #0000ff;
+    text-decoration: none;
+    margin: 20px 20px 20px 20px;
+    font-weight: bold;
+}
+
+
+/*=======================
+          Budaya
+  ========================*/
+
+/* BAGIAN ATAS */
+.hero-budaya {
+    min-height: 100dvh;
+    padding: 60px 7%;
+    color: white;
+}
+
+.hero-budaya h1 {
+    font-size: 45px;
+}
+
+.hero-budaya p {
+    line-height: 1.6;
+}
+
+/* RAGAM BUDAYA */
+.content {
+    width: 85%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+        .title-budaya {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .title-budaya h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            margin-top: 8px;
+            color: #666;
+        }
+
+        .cards {
+
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row wrap;
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 12px #dce2e7;
+            width: 500px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 18px;
+        }
+
+        .card h3 {
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .more {
+            display: inline-block;
+            margin-top: 10px;
+            color: #12395f;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+/*=========================
+           Wisata
+  =========================*/
+  .image-wisata {
+    width: 100%;
+    height: 150px;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .card-wisata {
+    background-color: #ffffff;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.7);
+  }
+
+  .card-wisata h3, .card-wisata p {
+    margin: 20px 20px 20px 20px;
+  }
+
+  /*=========================
+           Galeri
+  =========================*/
+
+  .image-galeri {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .card-galeri {
+    background-color: #ffffff;
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.7);
+  }
+
+  .card-galeri figcaption {
+    font-weight: bold;
+    margin: 20px 20px 20px 20px;
+  }
+
+  #information {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #information h2 {
+    position: relative;
+  }
+
+  #information h2::before  {
+    content: "";
+    position: absolute;
+    width: 80px;
+    left: 545px;
+    top: 75px;
+    height: 3px;
+    background-color: #d2b40c;
+  }
+
+/*=========================
+           Atribusi
+  =========================*/
+
+/* 1. Menyembunyikan pop-up di kondisi awal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* 2. Kunci Utama: Tampilkan pop-up saat ID-nya menjadi target di URL */
+.modal-overlay:target {
+  display: block;
+}
+
+/* 3. Desain Kotak Pop-up */
+.modal-box {
+  background-color: #ffffff;
+  margin: 10% auto;
+  padding: 25px;
+  width: 85%;
+  max-width: 600px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* 4. Area Scroll untuk 15+ Gambar */
+.modal-scroll {
+  max-height: 350px; 
+  overflow-y: auto;   /* Memunculkan scrollbar vertikal jika teks panjang */
+  margin-top: 15px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.modal-scroll a {
+    color: #0000ff;
+}
+
+/* 5. Desain Tombol Tutup */
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 28px;
+  color: #333;
+  text-decoration: none;
+}
+.close-btn:hover {
+  color: #ff0000;
+}
+
+
+/*=========================
+           Footer
+  =========================*/
+
+footer {
+    color: #ffffff;
+    background-color: #031849;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+/*=========================
+      Mobile Responsive
+  =========================*/
+@media (max-width: 576px) {
+    /*Navbar Header*/
+    nav {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    header nav ul li {
+        margin: 0px 5px 0px 5px;
+    }
+
+    /*Index Beranda Section*/
+    .hero {
+        background: url(images/Pemandangan-Banten-Blue.jpeg);
+        background-size: auto;
+        background-position: center;
+        min-height: 100dvh;
+    }
+
+    .card-container {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 20px 5px;
+        justify-content: space-around;
+    }
+
+    .title-budaya {
+        text-align: start;
+    }
+
+    .title-budaya h2::before {
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .cards .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cards .card img {
+        width: 100%;
+        height: 250px;
+    }
+    /*Wisata*/
+    .image-wisata {
+    width: 100%;
+    height: 250px;
+    border-radius: 20px 0px 0px 20px;
+    }
+
+    .card-wisata {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 500px;
+    height: 250px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.7);
+    }
+
+    .card-wisata h3, .card-wisata p {
+    margin: 20px 20px 20px 20px;
+    }
+    .dihilangkan-mobile {
+    display: none;
+    }
+
+    /*Galeri*/
+    .information-galeri {
+        padding: 20px;
+    }
+    .information h2:before {
+        content: none;
+        display: none;
+    }
+    .image-galeri {
+    width: 100%;
+    height: 300px;
+    border-radius: 0;
+  }
+
+  .card-galeri {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .card-galeri figcaption {
+    font-weight: bold;
+    margin: 20px 20px 20px 20px;
+  }
+  .container-galeri {
+    margin: 0;
+    background-color: #ffffff;
+  }
+}
